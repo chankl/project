@@ -24,6 +24,7 @@ st.dataframe(filtered_df)
 
 form = st.form(key="form2")
 form.subheader("Click Analyse to generate a comprehensive report based on your filtered data!🧮📊")
+form.write("Warning: Analysis time depends on the number of returned rows and may take 2-3 minutes on unfiltered data. Please filter as much as possible before clicking analyse.")
 
 if form.form_submit_button("Analyse"):
 
