@@ -3,6 +3,10 @@ import streamlit as st
 from logics.customer_query_handler import process_user_message
 from helper_functions.utility import check_password
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="wide",
