@@ -226,12 +226,13 @@ def process_table(df):
 
     task_analyze = Task(
         description="""\
-        1. Use the tool to analyze the provided data. The data contains historical resale flat prices in Singapore dollars. The data has been filtered by the customer.
-        2. Develop a comprehensive report that is derived from the data. Explain why your findings can be derived from the data.
+        1. Use the tool to analyze the provided data. The data contains historical resale flat prices in Singapore dollars.
+        2. Develop a comprehensive report using only information from the provided data.
+        3. The report will be read by the customer directly. Do not include further instructions or next steps.
         3. Do not include code or plots.""",
 
         expected_output="""\
-        A comprehensive analysis report that presents the results. Make sure to use the filtered data to generate the report.""",
+        A comprehensive analysis report that presents insights from the provided data. Make sure to only use the filtered data to generate the report.""",
 
         agent=agent_data_analyst,
     )
